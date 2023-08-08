@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Yaser Khademi Portfolio2</title>
+  <title>Yaser Khademi Portfolio</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -54,7 +54,38 @@
     .carousel .item {
       text-align: center;
     }
+
+    .section .columns {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .section .column {
+      flex: 1;
+      padding: 110px;
+      box-sizing: border-box;
+    }
+
+    .icon:not(:last-child) {
+    margin-right: 50px; /* Adjust this value for spacing */
+
+  }
+
+  .icon {
+    display: inline-block;
+
+    transition: transform 0.3s, filter 0.3s;
+  }
+  .icon:hover {
+    transform: scale(1.5); /* Adjust the scale for the hover effect */
+    filter: brightness(1.2); /* Adjust the brightness for the hover effect */
+  }
+
+
   </style>
+
+
+
 
 </head>
 <body>
@@ -65,7 +96,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Yaser Khademi Portfolio2</h1>
+            <h1 class="title is-1 publication-title">Yaser Khademi Portfolio</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -139,30 +170,124 @@
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+    <div class="has-text-centered" style="margin-bottom: 40px;"> <!-- Add margin to create a gap -->
+      <h2 class="title is-3">What I do</h2>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <figure class="image">
+          <img src="static/images/whatido/0.png" alt="Your Image" style="transform: scale(2.5);">
+        </figure>
+      </div>
+      <div class="column is-half">
+        <div class="content">
           <p>
-            Hello, I'm Yaser Khademi, an experienced professional specializing in digital electronics and embedded systems. With a background in electronic engineering and photonics, I bring a strong educational foundation and practical expertise to my work.
-            I have successfully completed numerous small and large-scale projects, showcasing my ability to solve complex problems in this field. I thrive on challenges and approach them with enthusiasm and dedication.
-           </p>
+            <span class="icon"> <a href="https://www.microsoft.com/en/microsoft-365/visio/flowchart-software" target="_blank" > <img src="static/images/whatido/i0.jpeg" alt="Icon" style="transform: scale(2.5);" ></a></span>
+          </p>
+          <p>
+            <h2 class="title is-3">Algorithm Design</h2> 
+            In the first step, I will design a comprehensive algorithm to guide the project. This design process will assist in identifying the suitable microcontroller and essential electronic components. By outlining a systematic plan, we'll ensure a logical progression, enabling informed choices for the project's components. This thoughtfully designed algorithm establishes a strong framework for project execution, setting the stage for a productive and streamlined development process.
+          </p>
         </div>
       </div>
     </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <figure class="image">
+          <img src="static/images/whatido/2.png" alt="Your Image" style="transform: scale(2.5);">
+        </figure>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          <p>
+            <span class="icon"><a href="https://www.altium.com/" target="_blank" > <img src="static/images/whatido/i2.png" alt="Icon" style="transform: scale(2.5);" ></a></span>
+          </p>
+          <p>
+            <h2 class="title is-3">Hardware Design</h2> 
+            In my hardware design work, I utilize Altium software for efficient and reliable designs. I carefully consider component placement, signal integrity, power and ground planes, and EMI/EMC compliance. Altium allows me to optimize signal paths through strategic component placement, impedance control, and length matching. I establish robust power and ground planes and address EMI/EMC concerns using shielding and filtering techniques. With Altium, I create high-performance PCB designs that meet modern electronics' demands.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <figure class="image">
+          <img src="static/images/whatido/3.png" alt="Your Image" style="transform: scale(2.5);">
+        </figure>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          <p>
+            <span class="icon">
+              <a href="https://www.st.com/" target="_blank" > <img src="static/images/whatido/i3.png" alt="Icon" style="transform: scale(2.5);"></a>
+            </span>
+            <span class="icon">
+              <a href="https://www.st.com/" target="_blank" > <img src="static/images/whatido/i4.png" alt="Icon" style="transform: scale(2.5);"></a>
+            </span>
+            <span class="icon">
+              <a href="https://www.arduino.cc/" target="_blank" > <img src="static/images/whatido/i1.jpg" alt="Icon" style="transform: scale(2.5);"></a>
+            </span>
+            <span class="icon">
+              <a href="https://www.espressif.com/" target="_blank" > <img src="static/images/whatido/i7.png" alt="Icon" style="transform: scale(2.5);"></a>
+            </span>
+          </p>
+          <h2 class="title is-3">Embedded Programming</h2> 
+          During the embedded coding phase, I employ versatile frameworks such as ARM, esp32, and Arduino. The selection is tailored to each project's unique demands, aligning with technical needs, financial considerations, and overall objectives. This flexibility allows me to make informed choices while utilizing C and C++ languages to craft efficient and effective code solutions.
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <figure class="image">
+          <img src="static/images/whatido/4.png" alt="Your Image" style="transform: scale(2.5);">
+        </figure>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          <p>
+            <span class="icon">
+              <a href="https://www.mathworks.com/" target="_blank" > <img src="static/images/whatido/i5.jpg" alt="Icon" style="transform: scale(2.5);"></a>
+            </span>
+          </p>
+          <h2 class="title is-3">Filter Design</h2> 
+          In certain projects, the device's task involves receiving and processing data from a sensor. To extract the desired data signal from other signals, such as noise, I design digital filters using MATLAB software. These filters are then implemented as programming code in the microcontroller. This enables real-time filtering of the data signals, allowing for further processing and analysis.
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <figure class="image">
+          <img src="static/images/whatido/5.png" alt="Your Image" style="transform: scale(2.5);">
+        </figure>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          <p>
+            <span class="icon">
+              <a href="https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-wpf?view=vs-2022" target="_blank" > <img src="static/images/whatido/i6.png" alt="Icon" style="transform: scale(2.5);"></a>
+            </span>
+          </p>
+          <h2 class="title is-3">WPF Programming</h2> 
+          In certain projects, the device's task involves receiving and processing data from a sensor. To extract the desired data signal from other signals, such as noise, I design digital filters using MATLAB software. These filters are then implemented as programming code in the microcontroller. This enables real-time filtering of the data signals, allowing for further processing and analysis.
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
-<!-- End paper abstract -->
 
 
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div class="has-text-centered"> <!-- Center-align the content -->
+      <div class="has-text-centered" style="margin-bottom: 40px;"> <!-- Center-align the content -->
         <h2 class="title is-3">MY WORKS</h2>
       </div>
       <div class="has-text-left"> <!-- Center-align the content -->
