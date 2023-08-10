@@ -1,366 +1,391 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+ 
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="assets/css/meyawo.css">
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
 
-
-  <title>Yaser Khademi Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-
-  <style>
-    /* Set image dimensions */
-    .carousel .item img {
-      height: 100%;
-      width : auto;
+    /* Styles for the modal */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
-    .carousel .item {
-      text-align: center;
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        width: 70%; /* Set the width of the pop-up */
+        height: 70%; /* Set the height of the pop-up */
+        max-width: 90%; /* Limit maximum width */
+        max-height: 90%; /* Limit maximum height */
+        overflow-y: auto; /* Enable scrolling if content overflows */
     }
 
-    .section .columns {
-      display: flex;
-      flex-direction: row;
+    .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
     }
 
-    .section .column {
-      flex: 1;
-      padding: 110px;
-      box-sizing: border-box;
+    /* Adjusted styles for the pop-up image size and centering */
+    .modal-image {
+        max-width: 70%; /* Set the image width to 50% of the pop-up width */
+        max-height: 70%; /* Set the image height to 50% of the pop-up height */
+        display: block;
+        margin: 0 auto; /* Center the image horizontally */
+        margin-bottom: 15px;
     }
 
-    .icon:not(:last-child) {
-    margin-right: 50px; /* Adjust this value for spacing */
+    /* Additional styles for your existing content */
+    .service-card {
+        /* Your existing styles here */
+    }
 
-  }
+    /* Styles for making the content clickable */
+    .clickable-content {
+        cursor: pointer;
+    }
 
-  .icon {
-    display: inline-block;
-
-    transition: transform 0.3s, filter 0.3s;
-  }
-  .icon:hover {
-    transform: scale(1.5); /* Adjust the scale for the hover effect */
-    filter: brightness(1.2); /* Adjust the brightness for the hover effect */
-  }
-
-
-  </style>
-
+    </style>
 
 
 
 </head>
-<body>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+           
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#service">Service</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
+                </li>
 
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Yaser Khademi Portfolio</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
 
-                  </span>
-                  </div>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am Yaser Khademi</span>
+            </h1>
+            <p class="header-subtitle">Embedded Electronics Engineer</p>
+
+            <a href="https://github.com/yaserk95" target="_blank"><button class="btn btn-primary">Github</button></a>
+            <a href="https://www.linkedin.com/in/yaser-khademi/" target="_blank"><button class="btn btn-primary">LinkedIn</button></a> 
+        </div>
+    </header><!-- end of page header -->
 
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
+    <span class="link-block">
+        <a href="https://github.com/yaserk95" target="_blank"
+        class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+      </a>
+    </span>
 
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="https://drive.google.com/file/d/1tz5zbMxBAKcNls3WlBBuQSmic3lEXw8N/view?usp=drive_link" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>resume</span>
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="assets/imgs/man2.png" class="about-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        I'm Yaser Khademi, an experienced professional specializing in digital electronics and embedded systems. With a background in electronic engineering and photonics, I bring a strong educational foundation and practical expertise to my work.
+I have successfully completed numerous small and large-scale projects, showcasing my ability to solve complex problems in this field. I thrive on challenges and approach them with enthusiasm and dedication.
+                    </p>
+                    <a href="https://drive.google.com/file/d/1tz5zbMxBAKcNls3WlBBuQSmic3lEXw8N/view?usp=drive_link" target="_blank">
+                        <button class="btn-rounded btn btn-outline-primary mt-4">Download RESUME</button>
+                      </a>
+                </div>
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Do ?</p>
+            <h6 class="section-title mb-6">Service</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <div class="clickable-content">
+                                <img src="assets/imgs/whatido/i0.jpeg" alt="Icon" class="icon">
+                                <h6 class="title">Algorithm Design</h6>
+                                <p class="subtitle">Algorithm design with Visio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- The modal or pop-up content -->
+                <div class="modal" id="popupModal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <img src="assets/imgs/whatido/0.png" alt="Popup Image" class="modal-image">
+                        <p>In the first step, I will design a comprehensive algorithm to guide the project. This design process will assist in identifying the suitable microcontroller and essential electronic components. By outlining a systematic plan, we'll ensure a logical progression, enabling informed choices for the project's components. This thoughtfully designed algorithm establishes a strong framework for project execution, setting the stage for a productive and streamlined development process.
+                        </p>
+                    </div>
+                </div>
+            
+
+
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <div class="clickable-content">
+                                <img src="assets/imgs/whatido/i2.png" alt="Icon" class="icon">
+                                <h6 class="title">Hardware Design</h6>
+                                <p class="subtitle">Hardware Design With Altium Designer software </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- The modal or pop-up content for the second icon -->
+                <div class="modal" id="popupModal2">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <img src="assets/imgs/whatido/2.png" alt="Popup Image" class="modal-image">
+                        <p>In my hardware design work, I utilize Altium software for efficient and reliable designs. I carefully consider component placement, signal integrity, power and ground planes, and EMI/EMC compliance. Altium allows me to optimize signal paths through strategic component placement, impedance control, and length matching. I establish robust power and ground planes and address EMI/EMC concerns using shielding and filtering techniques. With Altium, I create high-performance PCB designs that meet modern electronics' demands.
+
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <div class="clickable-content">
+                                <img src="assets/imgs/whatido/i3.png" alt="Icon" class="icon">
+                                <img src="assets/imgs/whatido/i4.png" alt="Icon" class="icon">
+                                <img src="assets/imgs/whatido/i1.jpg" alt="Icon" class="icon">
+                                <img src="assets/imgs/whatido/i7.png" alt="Icon" class="icon">
+                                <h6 class="title">Embedded Programming</h6>
+                                <p class="subtitle">Mastering embedded programming to engineer intelligent software  </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- The modal or pop-up content for the second icon -->
+                <div class="modal" id="popupModal2">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <img src="assets/imgs/whatido/3.png" alt="Popup Image" class="modal-image">
+                        <p>During the embedded coding phase, I employ versatile frameworks such as ARM, esp32, and Arduino. The selection is tailored to each project's unique demands, aligning with technical needs, financial considerations, and overall objectives. This flexibility allows me to make informed choices while utilizing C and C++ languages to craft efficient and effective code solutions.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <div class="clickable-content">
+                                <img src="assets/imgs/whatido/i5.jpg" alt="Icon" class="icon">
+                                <h6 class="title">Filter Design</h6>
+                                <p class="subtitle">Filter Design With MATLAB  </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- The modal or pop-up content for the second icon -->
+                <div class="modal" id="popupModal2">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <img src="assets/imgs/whatido/4.png" alt="Popup Image" class="modal-image">
+                        <p>In certain projects, the device's task involves receiving and processing data from a sensor. To extract the desired data signal from other signals, such as noise, I design digital filters using MATLAB software. These filters are then implemented as programming code in the microcontroller. This enables real-time filtering of the data signals, allowing for further processing and analysis.
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <div class="clickable-content">
+                                <img src="assets/imgs/whatido/i6.png" alt="Icon" class="icon">
+                                <h6 class="title">WPF Programming</h6>
+                                <p class="subtitle">Creating Cutting-Edge Desktop Software with WPF and C# </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- The modal or pop-up content for the second icon -->
+                <div class="modal" id="popupModal2">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <img src="assets/imgs/whatido/5.png" alt="Popup Image" class="modal-image">
+                        <p>In certain projects, the device's task involves receiving and processing data from a sensor. To extract the desired data signal from other signals, such as noise, I design digital filters using MATLAB software. These filters are then implemented as programming code in the microcontroller. This enables real-time filtering of the data signals, allowing for further processing and analysis.
+                             </p>
+                    </div>
+                </div>
+
+
+
+
+            </div><!-- end of row -->
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const modals = document.querySelectorAll('.modal');
+                const clickableContents = document.querySelectorAll('.clickable-content');
+                const closeModalButtons = document.querySelectorAll('.close-modal');
+        
+                clickableContents.forEach(function(content, index) {
+                    content.addEventListener('click', function() {
+                        modals[index].style.display = 'block';
+                    });
+                });
+        
+                closeModalButtons.forEach(function(closeButton) {
+                    closeButton.addEventListener('click', function() {
+                        modals.forEach(function(modal) {
+                            modal.style.display = 'none';
+                        });
+                    });
+                });
+        
+                modals.forEach(function(modal) {
+                    modal.addEventListener('click', function(event) {
+                        if (event.target === modal) {
+                            modal.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        </script>
+    </section><!-- end of service section -->
+
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Did ?</p>
+            <h6 class="section-title mb-6">Portfolio</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="Furnace_project.html" class="portfolio-card" > 
+                        <img src="assets/imgs/whatidid/Smart Furnace Controller.jpg" class="portfolio-card-img"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Smart Furnace Controller</h5>
+                                    
+                            </span>
+                        </span>
                     </a>
-                  </span>
+                </div>
+                <div class="col-md-4">
+                    <a href="accesspoint_project.html" class="portfolio-card">
+                        <img class="portfolio-card-img" src="accesspoint/1.jpg" class="img-responsive rounded"
+                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Rfid Accesspoint</h5>
+                                    
+                            </span>
+                        </span>
+                    </a>
+                </div>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/yaserk95" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://www.linkedin.com/in/yaser-khademi/" target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <img src="images/linkedin2.png" alt="LinkedIn Icon">
-                    </span>
-                    <span>linkedin</span>
-                  </a>
-                </span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- pricing section -->
+    
 
+   
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/Aurora Borealis-Stock Video.mov"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        "The important achievement of Apollo was demonstrating that humanity is not forever chained to this planet and our visions go rather further than that and our opportunities are unlimited." - Neil Armstrong
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="has-text-centered" style="margin-bottom: 40px;"> <!-- Add margin to create a gap -->
-      <h2 class="title is-3">What I do</h2>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <figure class="image">
-          <img src="static/images/whatido/0.png" alt="Your Image" style="transform: scale(2.5);">
-        </figure>
-      </div>
-      <div class="column is-half">
-        <div class="content">
-          <p>
-            <span class="icon"> <a href="https://www.microsoft.com/en/microsoft-365/visio/flowchart-software" target="_blank" > <img src="static/images/whatido/i0.jpeg" alt="Icon" style="transform: scale(2.5);" ></a></span>
-          </p>
-          <p>
-            <h2 class="title is-3">Algorithm Design</h2> 
-            In the first step, I will design a comprehensive algorithm to guide the project. This design process will assist in identifying the suitable microcontroller and essential electronic components. By outlining a systematic plan, we'll ensure a logical progression, enabling informed choices for the project's components. This thoughtfully designed algorithm establishes a strong framework for project execution, setting the stage for a productive and streamlined development process.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <figure class="image">
-          <img src="static/images/whatido/2.png" alt="Your Image" style="transform: scale(2.5);">
-        </figure>
-      </div>
-      <div class="column is-half">
-        <div class="content">
-          <p>
-            <span class="icon"><a href="https://www.altium.com/" target="_blank" > <img src="static/images/whatido/i2.png" alt="Icon" style="transform: scale(2.5);" ></a></span>
-          </p>
-          <p>
-            <h2 class="title is-3">Hardware Design</h2> 
-            In my hardware design work, I utilize Altium software for efficient and reliable designs. I carefully consider component placement, signal integrity, power and ground planes, and EMI/EMC compliance. Altium allows me to optimize signal paths through strategic component placement, impedance control, and length matching. I establish robust power and ground planes and address EMI/EMC concerns using shielding and filtering techniques. With Altium, I create high-performance PCB designs that meet modern electronics' demands.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <figure class="image">
-          <img src="static/images/whatido/3.png" alt="Your Image" style="transform: scale(2.5);">
-        </figure>
-      </div>
-      <div class="column is-half">
-        <div class="content">
-          <p>
-            <span class="icon">
-              <a href="https://www.st.com/" target="_blank" > <img src="static/images/whatido/i3.png" alt="Icon" style="transform: scale(2.5);"></a>
-            </span>
-            <span class="icon">
-              <a href="https://www.st.com/" target="_blank" > <img src="static/images/whatido/i4.png" alt="Icon" style="transform: scale(2.5);"></a>
-            </span>
-            <span class="icon">
-              <a href="https://www.arduino.cc/" target="_blank" > <img src="static/images/whatido/i1.jpg" alt="Icon" style="transform: scale(2.5);"></a>
-            </span>
-            <span class="icon">
-              <a href="https://www.espressif.com/" target="_blank" > <img src="static/images/whatido/i7.png" alt="Icon" style="transform: scale(2.5);"></a>
-            </span>
-          </p>
-          <h2 class="title is-3">Embedded Programming</h2> 
-          During the embedded coding phase, I employ versatile frameworks such as ARM, esp32, and Arduino. The selection is tailored to each project's unique demands, aligning with technical needs, financial considerations, and overall objectives. This flexibility allows me to make informed choices while utilizing C and C++ languages to craft efficient and effective code solutions.
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <figure class="image">
-          <img src="static/images/whatido/4.png" alt="Your Image" style="transform: scale(2.5);">
-        </figure>
-      </div>
-      <div class="column is-half">
-        <div class="content">
-          <p>
-            <span class="icon">
-              <a href="https://www.mathworks.com/" target="_blank" > <img src="static/images/whatido/i5.jpg" alt="Icon" style="transform: scale(2.5);"></a>
-            </span>
-          </p>
-          <h2 class="title is-3">Filter Design</h2> 
-          In certain projects, the device's task involves receiving and processing data from a sensor. To extract the desired data signal from other signals, such as noise, I design digital filters using MATLAB software. These filters are then implemented as programming code in the microcontroller. This enables real-time filtering of the data signals, allowing for further processing and analysis.
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <figure class="image">
-          <img src="static/images/whatido/5.png" alt="Your Image" style="transform: scale(2.5);">
-        </figure>
-      </div>
-      <div class="column is-half">
-        <div class="content">
-          <p>
-            <span class="icon">
-              <a href="https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-wpf?view=vs-2022" target="_blank" > <img src="static/images/whatido/i6.png" alt="Icon" style="transform: scale(2.5);"></a>
-            </span>
-          </p>
-          <h2 class="title is-3">WPF Programming</h2> 
-          In certain projects, the device's task involves receiving and processing data from a sensor. To extract the desired data signal from other signals, such as noise, I design digital filters using MATLAB software. These filters are then implemented as programming code in the microcontroller. This enables real-time filtering of the data signals, allowing for further processing and analysis.
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
+    <!-- footer -->
     <div class="container">
-      <div class="has-text-centered" style="margin-bottom: 40px;"> <!-- Center-align the content -->
-        <h2 class="title is-3">MY WORKS</h2>
-      </div>
-      <div class="has-text-left"> <!-- Center-align the content -->
-        <h2 class="subtitle is-4">Smart Furnace Controller</h2> <!-- Add the smaller title -->
-      </div>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <!-- Your image here -->
-          <img src="/static/images/Furnace2/1.jpg" alt="MY ALT TEXT"/>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img src="static/images/Furnace2/2.jpg" alt="MY ALT TEXT"/>
-        </div>
-      </div>
+        <footer class="footer">
+            <p class="mb-0">Copyright
+                <script>document.write(new Date().getFullYear())</script> &copy; <a
+                    href="http://www.devcrud.com">DevCRUD</a> Distribution <a
+                    href="https://themewagon.com">ThemeWagon</a>
+            </p>
 
-    <div class="has-text-left"> <!-- Center-align the content -->
-      <h2 class="subtitle is-4">RFID Access Control System</h2> <!-- Add the smaller title -->
-    </div>
-    <div id="results-carousel" class="carousel results-carousel">
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/accesspoint/1.png" alt="MY ALT TEXT"/>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/accesspoint/2.png" alt="MY ALT TEXT"/>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/accesspoint/3.jpg" alt="MY ALT TEXT"/>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/accesspoint/4.jpg" alt="MY ALT TEXT"/>
-      </div>
-    </div>
+        </footer>
+    </div> <!-- end of page footer -->
 
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
-    </div>
-  </div>
-</section>
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
 
+</body>
 
-
-
-
-<!-- End image carousel -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-<br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</html>
